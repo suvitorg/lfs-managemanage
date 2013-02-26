@@ -1,0 +1,12 @@
+{% for menugroup in menu %}
+<li>
+  <a>menugroup.title</a>
+  {% if menugroup.has_children %}
+    <ul>
+    {% for menuitem in menugroup %}
+    <li><a href="{% url menuitem.url %}">menuitem.title</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</li>
+{% endfor %}
