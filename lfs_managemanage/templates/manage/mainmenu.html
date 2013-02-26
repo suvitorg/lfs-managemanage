@@ -1,10 +1,11 @@
+{% load url from future %}
 {% for menugroup in menu %}
 <li>
-  <a>menugroup.title</a>
-  {% if menugroup.has_children %}
+  <a>{{ menugroup.title }}</a>
+  {% if menugroup.children %}
     <ul>
-    {% for menuitem in menugroup %}
-    <li><a href="{% url menuitem.url %}">menuitem.title</a></li>
+    {% for menuitem in menugroup.children %}
+    <li><a href="{% url menuitem.url %}">{{ menuitem.title }}</a></li>
     {% endfor %}
     </ul>
   {% endif %}
