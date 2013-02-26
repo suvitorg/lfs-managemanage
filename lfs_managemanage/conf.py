@@ -7,15 +7,17 @@ from appconf import AppConf
 
 class ManageManageConf(AppConf):
 
-    MAINMENU = [{'title': _('Shop'),
-                 'children':
-                   [{'url':'lfs_manage_shop',
-                     'title': _('Preferences')},
-                   ],
-                },
-               ]
+    MAINMENU = None
+    #MAINMENU = [{'title': _('Shop'),
+    #             'children':
+    #               [{'url':'lfs_manage_shop',
+    #                 'title': _('Preferences')},
+    #               ],
+    #            },
+    #           ]
 
-    PRODUCT_TABS = ['yandex']
+    PRODUCT_TABS = None
+    #PRODUCT_TABS = ['yandex']
 
     class Meta:
         prefix = 'lfs_manage'
